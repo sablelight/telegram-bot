@@ -1,64 +1,63 @@
-# Secrets and local state — never commit these
-.env
-.env.*
-*.env
-!.env.example
-*.pem
-*.key
-id_rsa*
-*.p12
-*.pfx
-*.kdbx
-*credentials*.json
-secrets.json
-*.local.json
-
-# Bot token files
-.bot_token
-*.token
-
-# Local databases (can contain ticket transcripts, user messages, guild data)
-*.db
-*.db-shm
-*.db-wal
-*.sqlite
-*.sqlite3
-
-# Downloaded archives — these are third-party source, not mine
-*.zip
-*.tar.gz
-*.7z
-
-# Build output
-build/
-dist/
-release/
-obj/
-bin/
-node_modules/
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.dart_tool/
-.gradle/
-
+# Go
 # Binaries
 *.exe
-*.apk
+*.exe~
+*.dll
 *.so
 *.dylib
-*.dll
-*.jar
+*.test
+*.out
+
+# Test binary
+*.test
+
+# Output of go coverage
+*.coverprofile
+coverage.out
+coverage.html
+
+# Dependency directories
+vendor/
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
 
 # Logs
 *.log
 
-# Editors / OS
-.vscode/
-.idea/
-*.swp
-.DS_Store
-Thumbs.db
 # Build output
-telegram-bot/telegram-bot
+bin/
+dist/
+out/
+build/
+
+# Profiling
+*.pprof
+*.prof
+
+# Generated files
+zz_generated.*
+*.pb.go
+*.gen.go
+
+# Coverage
+cover.out
+coverage.xml
